@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error-container": "#ffdad6", "on-tertiary-fixed": "#2a1700", "primary-fixed-dim": "#4cd7f6", "on-background": "#dae2fd", "surface-container-highest": "#2d3449", "inverse-primary": "#00687a", "on-secondary-container": "#003f38", "primary": "#4cd7f6", "on-tertiary-container": "#563400", "on-surface-variant": "#bcc9cd", "secondary-fixed": "#71f8e4", "on-tertiary": "#472a00", "surface-tint": "#4cd7f6", "tertiary-container": "#e79400", "surface-container-low": "#131b2e", "tertiary": "#ffb95f", "outline-variant": "#3d494c", "on-surface": "#dae2fd", "outline": "#869397", "on-primary": "#003640", "surface-bright": "#31394d", "on-secondary": "#003731", "surface-dim": "#0b1326", "inverse-surface": "#dae2fd", "on-tertiary-fixed-variant": "#653e00", "surface-container-high": "#222a3d", "surface-container": "#171f33", "secondary-fixed-dim": "#4fdbc8", "on-secondary-fixed": "#00201c", "surface": "#0b1326", "error": "#ffb4ab", "surface-variant": "#2d3449", "inverse-on-surface": "#283044", "on-primary-container": "#00424f", "tertiary-fixed-dim": "#ffb95f", "background": "#0b1326", "surface-container-lowest": "#060e20", "on-primary-fixed-variant": "#004e5c", "on-secondary-fixed-variant": "#005048", "error-container": "#93000a", "tertiary-fixed": "#ffddb8", "on-primary-fixed": "#001f26", "on-error": "#690005", "primary-container": "#06b6d4", "primary-fixed": "#acedff", "secondary-container": "#04b4a2", "secondary": "#4fdbc8" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "space-sm": "0.5rem", "gutter": "1.5rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "space-md": "1rem", "margin": "2rem", "space-xs": "0.25rem" }, "fontFamily": { "label-sm": ["JetBrains Mono"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Inter"], "display-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "code-sm": ["JetBrains Mono"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["JetBrains Mono"], "body-sm": ["Inter"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "code-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="TraceMind AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VU_5nroi2kJ-7NADNJG6QsY6NGrNn2bAJaOWcq0PB2unG4FeRSnsSv93hRDejpzTDi4nG82u-HsaDWrfvTxvLBYOHbekr31DAD3HIVwfb2DV14yhXZBD2LbSL4PZumBwv3RYNbRGkRXW24MtxQsikTpx0SD9cubXVQb9x-DMSl8Z0tAQ2g3i2uA4PRgwBwixEGvvyJSiWhq0VusPe1eZJrzfayP767uWHc_vp2FYxKp2gbY2eQFEfxkhU"/><div class="flex flex-col justify-center"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">TraceMind AI</span><span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm uppercase tracking-wide">DEMO | LAB-OPS</span></div><span class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 leading-tight">Learn from every failure. Prevent the next one.</span></div></div><div class="flex items-center gap-space-xs"><button class="relative w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface animate-pulse"></span></button><div class="w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdgwcrCFbljGbH0Uvp1ccHgK_Vn_BmP00rQzOYaqk-sE4z6w3c8Q7IKaTKC1QMi2Uaob0buK2Fhthw_U6yxOMrc1BjdDEKIvPj4OV_1VNDOsCauJdSXhpyNNNR2HiHqdQ8lXD2IobAwW5B8sLDKuBMyehOSPC6y97BUth8-tW9p0SccK108Y3yEquAyQJ5ZC_NYK6vpacSZmhFx_Q7h3HGU36eQy4ZYMWmJGCXYTjngVYxosO5HEv9xQ"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-24 bg-surface px-margin-mobile"><div class="flex flex-col w-full pb-8 space-y-space-md">
+<!-- Status Context Ribbon -->
+<div class="flex items-center justify-between px-space-md py-space-xs bg-surface-container-high rounded-lg shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Active Ingestion Engine</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-code-sm text-code-sm font-medium">DEMO DATA</span>
+</div>
+<!-- Screen Narrative Header -->
+<div class="flex flex-col space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">dynamic_form</span>
+<h1 class="font-headline-md text-headline-md text-on-surface">New Incident Telemetry</h1>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+      Log an operational disruption or safety anomaly for AI pattern detection.
+    </p>
+</div>
+<!-- Mode Selector (Quick Intake Segmented Toggle) -->
+<div class="flex flex-col space-y-space-xs">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Intake Protocol</label>
+<div class="grid grid-cols-3 gap-1 p-1 bg-surface-container rounded-xl shadow-inner">
+<button class="py-2 px-1 text-center rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-all shadow-sm" type="button">
+        Lab Equip
+      </button>
+<button class="py-2 px-1 text-center rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" type="button">
+        IT Outage
+      </button>
+<button class="py-2 px-1 text-center rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" type="button">
+        Safety / Bio
+      </button>
+</div>
+</div>
+<!-- Incident Core Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-md shadow-md">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-md text-label-md text-primary uppercase tracking-wide">01 // Primary Anomaly Spec</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[16px]">verified</span> Telemetry Synced
+      </span>
+</div>
+<!-- Title Field -->
+<div class="flex flex-col space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="incident-title">Incident Subject / Headline</label>
+<span class="font-code-sm text-code-sm text-on-surface-variant">59/120</span>
+</div>
+<div class="relative">
+<input class="w-full h-11 px-space-md bg-surface-container rounded-lg text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-high transition-colors shadow-inner" id="incident-title" type="text" value="Centrifuge C-3 Rotor Vibration Exceeded Safe Threshold"/>
+<span class="absolute right-3 top-3 material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">State the affected hardware identifier and observable failure mode.</p>
+</div>
+<!-- Category Dropdown & Workstation -->
+<div class="grid grid-cols-1 gap-space-md">
+<!-- Category -->
+<div class="flex flex-col space-y-1.5">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="category-select">Classification Domain</label>
+<div class="relative">
+<select class="w-full h-11 px-space-md appearance-none bg-surface-container rounded-lg text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-high shadow-inner" id="category-select">
+<option selected="">Laboratory Equipment &amp; Biosafety</option>
+<option>IT Network &amp; Sensor Stream</option>
+<option>Chemical Safety &amp; Containment</option>
+<option>HVAC &amp; Ambient Environmental Control</option>
+</select>
+<span class="pointer-events-none absolute right-3 top-3 material-symbols-outlined text-on-surface-variant text-[20px]">arrow_drop_down</span>
+</div>
+</div>
+<!-- Location / Workstation -->
+<div class="flex flex-col space-y-1.5">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="location">Location / Workstation ID</label>
+<div class="relative">
+<span class="absolute left-3 top-3 material-symbols-outlined text-on-surface-variant text-[18px]">location_on</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container rounded-lg text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-high shadow-inner" id="location" type="text" value="Bio-Tech Annex, Lab Room 204-B"/>
+</div>
+</div>
+</div>
+<!-- Timestamp Row with 'Now' trigger -->
+<div class="flex flex-col space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="timestamp">Recorded Anomaly Timestamp</label>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">UTC-05:00</span>
+</div>
+<div class="flex gap-space-xs">
+<div class="relative flex-1">
+<span class="absolute left-3 top-3 material-symbols-outlined text-on-surface-variant text-[18px]">schedule</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container rounded-lg text-on-surface font-body-md text-body-md outline-none shadow-inner" id="timestamp" type="text" value="Today, 10:45 AM"/>
+</div>
+<button class="px-space-md h-11 bg-surface-container-high hover:bg-surface-bright text-primary font-label-md text-label-md uppercase font-semibold rounded-lg shadow-sm transition-colors active:scale-95 flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Now</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Criticality & Severity Matrix -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-md shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary uppercase tracking-wide">02 // Severity &amp; Risk Tiers</span>
+<span class="px-space-xs py-0.5 rounded bg-error/15 text-error font-label-sm text-label-sm font-semibold uppercase flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span> Escalated
+      </span>
+</div>
+<!-- Severity Selector -->
+<div class="flex flex-col space-y-1.5">
+<label class="font-label-md text-label-md text-on-surface font-medium">Criticality Tier</label>
+<div class="grid grid-cols-4 gap-1.5">
+<!-- Low -->
+<button class="py-2.5 px-1 rounded-lg bg-surface-container text-secondary font-label-sm text-label-sm font-medium flex flex-col items-center gap-1 opacity-70 hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">low_priority</span>
+<span>Low</span>
+</button>
+<!-- Medium -->
+<button class="py-2.5 px-1 rounded-lg bg-surface-container text-tertiary font-label-sm text-label-sm font-medium flex flex-col items-center gap-1 opacity-70 hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">warning_amber</span>
+<span>Med</span>
+</button>
+<!-- High -->
+<button class="py-2.5 px-1 rounded-lg bg-surface-container text-tertiary-container font-label-sm text-label-sm font-medium flex flex-col items-center gap-1 opacity-70 hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+<span>High</span>
+</button>
+<!-- Critical (Selected) -->
+<button class="py-2.5 px-1 rounded-lg bg-error-container text-on-error-container font-label-sm text-label-sm font-bold flex flex-col items-center gap-1 shadow-lg shadow-error/20" type="button">
+<span class="material-symbols-outlined text-[18px]">error</span>
+<span>Critical</span>
+</button>
+</div>
+</div>
+<!-- Impact & Downtime Matrix -->
+<div class="grid grid-cols-1 gap-space-md pt-space-xs">
+<div class="flex flex-col space-y-1.5">
+<label class="font-label-md text-label-md text-on-surface font-medium">Operational Impact Classification</label>
+<div class="p-space-sm bg-surface-container rounded-lg space-y-2">
+<div class="flex items-center gap-space-sm p-space-xs rounded bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">radio_button_checked</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">Sample Loss &amp; Protocol Delayed</span>
+<span class="font-label-sm text-label-sm text-tertiary">&gt; 4 hrs work backlog created</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-xs rounded text-on-surface-variant opacity-60">
+<span class="material-symbols-outlined text-[20px]">radio_button_unchecked</span>
+<span class="font-body-md text-body-md">Minor Delay (&lt; 1 hr), complete sample preservation</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="downtime-input">Estimated Downtime</label>
+<span class="font-code-sm text-code-sm text-secondary font-semibold">Takt Impact: -18%</span>
+</div>
+<div class="relative">
+<span class="absolute left-3 top-3 material-symbols-outlined text-on-surface-variant text-[18px]">timelapse</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container rounded-lg text-on-surface font-body-md text-body-md outline-none shadow-inner" id="downtime-input" type="text" value="5.5 Hours"/>
+</div>
+</div>
+</div>
+<!-- Incident Description Area -->
+<div class="flex flex-col space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="description">Failure Sequence Narrative</label>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">auto_fix_high</span> NLP Pre-Scan Active
+        </span>
+</div>
+<textarea class="w-full p-space-md bg-surface-container rounded-lg text-on-surface font-body-md text-body-md leading-relaxed outline-none shadow-inner resize-none focus:bg-surface-container-high transition-colors" id="description" rows="4">During high-speed centrifugation (12,000 RPM) of clinical trial samples, the emergency vibration sensor tripped and automatic brake engaged. Rotor was balanced within standard +/- 0.05g tolerance before cycle. Similar wobble noted last Tuesday.</textarea>
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> Recurrence keyword detected: "Similar wobble"
+        </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">214 chars</span>
+</div>
+</div>
+</div>
+<!-- Hardware Photo Reference (Visual Richness) -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary uppercase tracking-wide">03 // Photographic Telemetry</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 Artifacts Attached</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="relative rounded-lg overflow-hidden h-28 bg-surface-container shadow-inner group">
+<img class="w-full h-full object-cover" data-alt="High precision diagnostic close-up of a brushed steel centrifuge spindle shaft inside an industrial biological laboratory showing micro-wear marks under cool cyan and deep slate inspection LED lighting, macro view." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQR7p-ZvDjbQzrRfDI7KLpQf1zTZ0IHF38yHBxD6x_bgkJ86Xk7oVNflEqDWUadaRVVWcc_Cjl8kvK49hYXkiyqLNDiBvYNxLwm7kmZA5Z12UCIlaGWnXw9BSujNmTUqketxTV88GZK7QIxqXSoDxWPwsDYv3O2JNk0xUTs_6h6EnJbCH0m-eZseAjQlGuHMD7btou_yYrGeOHPIL-wCcRh3q96os2TWlNI3Ww7YhCyBvKjZaRcVywQw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent flex items-end p-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface truncate">rotor_spindle_photo.jpg</span>
+</div>
+<div class="absolute top-2 right-2 px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+          1.8 MB
+        </div>
+</div>
+<div class="relative rounded-lg overflow-hidden h-28 bg-surface-container shadow-inner flex flex-col justify-between p-space-sm">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary text-[28px]">insights</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-primary font-code-sm text-code-sm">CSV LOG</span>
+</div>
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-on-surface line-clamp-1">sensor_telemetry_apr24.csv</span>
+<span class="font-code-sm text-code-sm text-secondary">3,400 data points synced</span>
+</div>
+</div>
+</div>
+<!-- Upload Dropper Box -->
+<div class="p-space-md rounded-lg bg-surface-container-high/60 flex flex-col items-center justify-center text-center space-y-2 cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shadow-inner">
+<span class="material-symbols-outlined text-[22px]">cloud_upload</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Drop or Tap to Attach Diagnostic Telemetry</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Supports .CSV, .JSON vibration dumps, or JPG optical scans (up to 50MB)</span>
+</div>
+</div>
+</div>
+<!-- AI Correlative Notice Banner -->
+<div class="p-space-md rounded-xl bg-surface-container-high relative overflow-hidden shadow-lg">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-primary/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-start gap-space-sm">
+<div class="p-2 rounded-lg bg-primary-container text-on-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+</div>
+<div class="flex flex-col space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">TraceMind Recurrence Engine</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/20 text-primary font-label-sm text-label-sm">LIVE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          TraceMind AI will compare this report against <span class="text-on-surface font-semibold">342 historical lab records</span> to evaluate recurrence probability, isolate root cause pathways, and draft automated CAPA tickets.
+        </p>
+</div>
+</div>
+</div>
+<!-- Primary & Secondary Action Array -->
+<div class="flex flex-col space-y-space-sm pt-space-xs">
+<!-- Primary Analyze Action -->
+<button class="relative overflow-hidden w-full h-14 rounded-xl bg-gradient-to-r from-primary-container to-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center gap-space-xs shadow-lg shadow-primary-container/25 active:scale-[0.98] transition-all" id="submit-ai-btn" type="button">
+<span class="material-symbols-outlined text-[24px]">electric_bolt</span>
+<span class="tracking-wide font-bold">Analyze Incident with TraceMind AI</span>
+<!-- Shimmer Highlight Effect -->
+<div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite]"></div>
+</button>
+<!-- Save Draft / Reset Group -->
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="h-11 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-high transition-colors flex items-center justify-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save Draft</span>
+</button>
+<button class="h-11 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-colors flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+<span>Discard Form</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for primary button ingestion feedback
+  const submitBtn = document.getElementById('submit-ai-btn');
+  if (submitBtn) {
+    submitBtn.addEventListener('click', function() {
+      const originalHtml = this.innerHTML;
+      this.classList.add('opacity-90', 'cursor-wait');
+      this.innerHTML = `
+        <span class="material-symbols-outlined animate-spin text-[22px]">progress_activity</span>
+        <span class="tracking-wide font-bold">Correlating 342 Nodes...</span>
+      `;
+      setTimeout(() => {
+        this.innerHTML = `
+          <span class="material-symbols-outlined text-[22px]">verified</span>
+          <span class="tracking-wide font-bold">Pattern Triangulated!</span>
+        `;
+        setTimeout(() => {
+          this.innerHTML = originalHtml;
+          this.classList.remove('opacity-90', 'cursor-wait');
+        }, 1800);
+      }, 1400);
+    });
+  }
+</script></main><div class="fixed bottom-24 right-margin-mobile z-40"><a class="flex items-center gap-space-xs px-space-md py-space-sm bg-gradient-to-r from-primary-container to-primary text-on-primary font-headline-sm text-headline-sm rounded-full shadow-[0_4px_20px_rgba(6,182,212,0.35)] active:scale-95 transition-transform min-h-[44px]" data-path="quick-report" href="#"><span class="material-symbols-outlined text-[20px]">add_alert</span><span class="font-label-md text-label-md uppercase tracking-wider font-semibold">Report Incident</span></a></div><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.4)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm tracking-tight mt-0.5">Dashboard</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] transition-colors text-primary font-semibold" data-path="report" href="#"><span class="material-symbols-outlined text-[22px]">warning</span><span class="font-label-sm text-label-sm tracking-tight mt-0.5">Report</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="ai-investigate" href="#"><span class="material-symbols-outlined text-[22px]">auto_awesome</span><span class="font-label-sm text-label-sm tracking-tight mt-0.5">Investigate</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="risk-and-actions" href="#"><span class="material-symbols-outlined text-[22px]">verified_user</span><span class="font-label-sm text-label-sm tracking-tight mt-0.5">Risk &amp; CAPA</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="memory-and-sim" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-label-sm tracking-tight mt-0.5">Simulation</span></a></div></nav></body></html>

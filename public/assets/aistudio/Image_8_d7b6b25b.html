@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error-container": "#ffdad6", "on-tertiary-fixed": "#2a1700", "primary-fixed-dim": "#4cd7f6", "on-background": "#dae2fd", "surface-container-highest": "#2d3449", "inverse-primary": "#00687a", "on-secondary-container": "#003f38", "primary": "#4cd7f6", "on-tertiary-container": "#563400", "on-surface-variant": "#bcc9cd", "secondary-fixed": "#71f8e4", "on-tertiary": "#472a00", "surface-tint": "#4cd7f6", "tertiary-container": "#e79400", "surface-container-low": "#131b2e", "tertiary": "#ffb95f", "outline-variant": "#3d494c", "on-surface": "#dae2fd", "outline": "#869397", "on-primary": "#003640", "surface-bright": "#31394d", "on-secondary": "#003731", "surface-dim": "#0b1326", "inverse-surface": "#dae2fd", "on-tertiary-fixed-variant": "#653e00", "surface-container-high": "#222a3d", "surface-container": "#171f33", "secondary-fixed-dim": "#4fdbc8", "on-secondary-fixed": "#00201c", "surface": "#0b1326", "error": "#ffb4ab", "surface-variant": "#2d3449", "inverse-on-surface": "#283044", "on-primary-container": "#00424f", "tertiary-fixed-dim": "#ffb95f", "background": "#0b1326", "surface-container-lowest": "#060e20", "on-primary-fixed-variant": "#004e5c", "on-secondary-fixed-variant": "#005048", "error-container": "#93000a", "tertiary-fixed": "#ffddb8", "on-primary-fixed": "#001f26", "on-error": "#690005", "primary-container": "#06b6d4", "primary-fixed": "#acedff", "secondary-container": "#04b4a2", "secondary": "#4fdbc8" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "space-sm": "0.5rem", "gutter": "1.5rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "space-md": "1rem", "margin": "2rem", "space-xs": "0.25rem" }, "fontFamily": { "label-sm": ["JetBrains Mono"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Inter"], "display-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "code-sm": ["JetBrains Mono"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["JetBrains Mono"], "body-sm": ["Inter"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "code-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="TraceMind AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VU_5nroi2kJ-7NADNJG6QsY6NGrNn2bAJaOWcq0PB2unG4FeRSnsSv93hRDejpzTDi4nG82u-HsaDWrfvTxvLBYOHbekr31DAD3HIVwfb2DV14yhXZBD2LbSL4PZumBwv3RYNbRGkRXW24MtxQsikTpx0SD9cubXVQb9x-DMSl8Z0tAQ2g3i2uA4PRgwBwixEGvvyJSiWhq0VusPe1eZJrzfayP767uWHc_vp2FYxKp2gbY2eQFEfxkhU"/><div class="flex flex-col justify-center"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">TraceMind AI</span><span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm uppercase tracking-wide">DEMO | LAB-OPS</span></div><span class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 leading-tight">Learn from every failure. Prevent the next one.</span></div></div><div class="flex items-center gap-space-xs"><button class="relative w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface animate-pulse"></span></button><div class="w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdgwcrCFbljGbH0Uvp1ccHgK_Vn_BmP00rQzOYaqk-sE4z6w3c8Q7IKaTKC1QMi2Uaob0buK2Fhthw_U6yxOMrc1BjdDEKIvPj4OV_1VNDOsCauJdSXhpyNNNR2HiHqdQ8lXD2IobAwW5B8sLDKuBMyehOSPC6y97BUth8-tW9p0SccK108Y3yEquAyQJ5ZC_NYK6vpacSZmhFx_Q7h3HGU36eQy4ZYMWmJGCXYTjngVYxosO5HEv9xQ"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-24 bg-surface px-margin-mobile"><div class="flex flex-col w-full pb-8 space-y-space-md">
+<!-- Demo Data Banner -->
+<div class="w-full bg-surface-container-high rounded-xl p-space-sm flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0" style="font-variation-settings: 'FILL' 1;">science</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">
+<span class="text-primary font-semibold uppercase">Simulated Run</span> · Synthetic telemetry feed active
+      </p>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-primary-container/20 text-primary font-code-sm text-code-sm shrink-0">ENV: LAB-C</span>
+</div>
+<!-- Incident Header Summary Card -->
+<div class="w-full bg-surface-container rounded-xl p-space-md shadow-md flex flex-col space-y-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">#INC-2024-089 · Lab Equipment</span>
+<h1 class="font-headline-sm text-headline-sm text-on-surface mt-0.5 leading-snug">Investigation: Centrifuge C-3 High-Vibration Trip</h1>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-error-container/40 text-error font-label-sm text-label-sm uppercase tracking-wide shrink-0 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+        Critical
+      </span>
+</div>
+<!-- Metadata pill grid -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<div class="bg-surface-container-low rounded-lg p-space-xs flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">schedule</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">2 hrs ago by Sarah K.</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-xs flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">psychology</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Model: TraceMind v4.2</span>
+</div>
+</div>
+<!-- AI Diagnostic Status Pill -->
+<div class="w-full bg-surface-container-high rounded-lg p-space-sm flex items-center justify-between mt-space-xs">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">AI Analysis Complete</span>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="font-label-sm text-label-sm text-primary font-semibold">Confidence</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold">89%</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Diagnostic Waveform Mini-Visualizer -->
+<div class="w-full bg-surface-container rounded-xl p-space-md shadow-md flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">show_chart</span>
+<span class="font-label-md text-label-md text-on-surface">Spindle Harmonic Telemetry</span>
+</div>
+<span class="font-code-sm text-code-sm text-error bg-error-container/30 px-2 py-0.5 rounded-full">TRIP: 4.28 mm/s @ 11.85k RPM</span>
+</div>
+<div class="w-full h-24 bg-surface-container-lowest rounded-lg overflow-hidden relative p-2 flex items-end">
+<!-- Grid Lines -->
+<div class="absolute inset-0 flex flex-col justify-between p-2 pointer-events-none opacity-20">
+<div class="w-full h-[1px] bg-outline"></div>
+<div class="w-full h-[1px] bg-outline"></div>
+<div class="w-full h-[1px] bg-error"></div>
+<div class="w-full h-[1px] bg-outline"></div>
+</div>
+<!-- SVG Trace Line -->
+<svg class="w-full h-full overflow-visible relative z-10" preserveaspectratio="none" viewbox="0 0 320 80">
+<defs>
+<lineargradient id="traceGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4cd7f6" stop-opacity="0.4"></stop>
+<stop offset="100%" stop-color="#4cd7f6" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<path d="M 0 65 Q 40 64, 80 62 T 160 58 T 220 50 T 260 40 T 285 10 L 290 8 L 300 70 L 320 72" fill="none" stroke="#4cd7f6" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M 0 65 Q 40 64, 80 62 T 160 58 T 220 50 T 260 40 T 285 10 L 290 8 L 300 70 L 320 72 L 320 80 L 0 80 Z" fill="url(#traceGrad)"></path>
+<!-- Trip pulse marker -->
+<circle class="animate-ping" cx="285" cy="10" fill="#ffb4ab" r="4"></circle>
+<circle cx="285" cy="10" fill="#ffb4ab" r="3.5"></circle>
+</svg>
+<span class="absolute bottom-1 right-2 font-label-sm text-label-sm text-on-surface-variant opacity-75">T-00:00:03.4</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-code-sm text-code-sm pt-1">
+<span>Baseline: 0.8 mm/s</span>
+<span class="text-tertiary">Brake Engaged: +140ms</span>
+<span>Safe Limit: 3.5 mm/s</span>
+</div>
+</div>
+<!-- Interactive Visual Component: Lab Centrifuge Micro-Visualizer -->
+<div class="w-full bg-surface-container rounded-xl overflow-hidden shadow-md flex flex-col">
+<div class="relative w-full h-44 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Close-up macro technical photography of an ultra-high-speed laboratory centrifuge titanium rotor spindle mechanism in a clean diagnostic research laboratory, cool dark navy and electric cyan directional illumination, precision engineering inspection mode" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5SsKgqx-dL6TueGw29UG1tdGMr83_VOr1xSQc3_kpiRvRhLZHxSBov-z_Hov7PpYP36uvKL4TmhLnY0yLfuIiXyJEt9-zzau22LBGciAbJ9PYxLGQJbz9l8M3vuEQ9Umslo0KB_k8zy2YUvlMjG6XrrwR3yWhxtgyzWqMNLJvUGfZrKwEnFWqhKfdfKlVAx_kFig95JTJGyWXM_UVPGgxWmKWQwpBgyWqDa27lwNZlGoA7I1DG4XqMQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/60 to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm bg-surface-container-lowest/80 backdrop-blur-md px-space-sm py-1 rounded-full flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary">Sensor Node: AXIS-Z-MOTOR</span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Diagnostic Frame C-3</span>
+<span class="font-code-sm text-code-sm text-primary px-2 py-0.5 rounded-full bg-surface-container-highest/90">ID: ROTOR-VIB-01</span>
+</div>
+</div>
+</div>
+<!-- Epistemic Triad (Observed Facts vs Hypotheses vs Missing Info) -->
+<div class="w-full flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">layers</span>
+        Epistemic Triad
+      </h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Evidence Hierarchy</span>
+</div>
+<!-- Segmented Tab Bar for Epistemic Triad -->
+<div class="grid grid-cols-3 gap-1 bg-surface-container-high p-1 rounded-xl" id="triad-tab-bar">
+<button class="py-2 px-1 rounded-lg text-center font-label-sm text-label-sm transition-all bg-primary text-on-primary font-semibold shadow-sm flex items-center justify-center gap-1" id="tab-facts" onclick="switchTriad('facts')">
+<span class="material-symbols-outlined text-[15px]">check_circle</span>
+        Facts (3)
+      </button>
+<button class="py-2 px-1 rounded-lg text-center font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1" id="tab-hypotheses" onclick="switchTriad('hypotheses')">
+<span class="material-symbols-outlined text-[15px]">lightbulb</span>
+        Hypotheses (2)
+      </button>
+<button class="py-2 px-1 rounded-lg text-center font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1" id="tab-gaps" onclick="switchTriad('gaps')">
+<span class="material-symbols-outlined text-[15px]">help_center</span>
+        Gaps (2)
+      </button>
+</div>
+<!-- Triad Content Panes -->
+<!-- 1. Facts Pane -->
+<div class="flex flex-col space-y-space-xs transition-opacity duration-200" id="pane-facts">
+<div class="bg-surface-container rounded-xl p-space-md flex items-start gap-space-sm shadow-sm">
+<div class="p-1.5 rounded-lg bg-secondary-container/20 text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">speed</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium">Vibration exceeded 4.2 mm/s threshold</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Measured at 11,850 RPM right before active trip command issued.</p>
+<span class="font-code-sm text-code-sm text-secondary mt-1">TELEMETRY: SENSOR_ACCEL_RMS#3</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-xl p-space-md flex items-start gap-space-sm shadow-sm">
+<div class="p-1.5 rounded-lg bg-secondary-container/20 text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">scale</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium">Operator weight verification passed</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Dual-bucket load delta logged at 0.02g (tolerance threshold is ±0.15g).</p>
+<span class="font-code-sm text-code-sm text-secondary mt-1">LOG: BALANCE_SCALE_AUTO_LOG</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-xl p-space-md flex items-start gap-space-sm shadow-sm">
+<div class="p-1.5 rounded-lg bg-secondary-container/20 text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">build</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium">Drive shaft spindle replaced recently</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Replaced 4 months ago during routine preventive overhaul (WO #88219).</p>
+<span class="font-code-sm text-code-sm text-secondary mt-1">ERP: PM-RECORD-Q3</span>
+</div>
+</div>
+</div>
+<!-- 2. Hypotheses Pane (Hidden by default) -->
+<div class="hidden flex flex-col space-y-space-xs transition-opacity duration-200" id="pane-hypotheses">
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col space-y-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">Hypothesis A</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">78% Confidence</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium">Bearing wear in lower motor spindle assembly</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Harmonic resonance triggered by micro-pitting under sustained high centrifugal load.</p>
+</div>
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col space-y-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold">Hypothesis B</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">42% Confidence</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium">Vibration isolator mount misalignment</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Uneven dampening following recent bench realignment and laboratory floor buffing.</p>
+</div>
+</div>
+<!-- 3. Missing Gaps Pane (Hidden by default) -->
+<div class="hidden flex flex-col space-y-space-xs transition-opacity duration-200" id="pane-gaps">
+<div class="bg-surface-container rounded-xl p-space-md flex items-start gap-space-sm shadow-sm">
+<div class="p-1.5 rounded-lg bg-tertiary-container/30 text-tertiary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">thermostat</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium">Lubrication temperature log missing</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Motor housing RTD sensor logged offline 12 days prior; temp gradient unavailable.</p>
+<span class="font-code-sm text-code-sm text-tertiary mt-1">ACTION: REQUEST SCADA HISTORIAN RESCAN</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-xl p-space-md flex items-start gap-space-sm shadow-sm">
+<div class="p-1.5 rounded-lg bg-tertiary-container/30 text-tertiary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium">Contractor torque-spec signoff pending</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Awaiting third-party maintenance torque calibration certificate.</p>
+<span class="font-code-sm text-code-sm text-tertiary mt-1">STATUS: PENDING EXTERNAL VENDOR</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Possible Root Causes with Uncertainty Explanations -->
+<div class="w-full flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">account_tree</span>
+        Possible Root Causes
+      </h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ranked Probability</span>
+</div>
+<!-- Root Cause 1 Card -->
+<div class="w-full bg-surface-container rounded-xl p-space-md shadow-md flex flex-col space-y-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-7 h-7 rounded-full bg-primary/20 text-primary flex items-center justify-center font-label-md text-label-md font-bold shrink-0">1</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Spindle Bearing Micro-Degradation</h3>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold">78% Probable</span>
+<span class="font-code-sm text-code-sm text-primary mt-0.5">High Severity</span>
+</div>
+</div>
+<!-- Probability Bar -->
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container rounded-full" style="width: 78%"></div>
+</div>
+<!-- Evidence block -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col space-y-1">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[16px]">query_stats</span>
+<span class="font-label-sm text-label-sm font-semibold">Supporting Evidence</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+          Accelerometer telemetry matches signature curve of verified failure <strong class="text-primary font-semibold">INC-2023-112</strong> with a <strong class="text-secondary font-semibold">94% Pearson correlation</strong>.
+        </p>
+</div>
+<!-- Uncertainty note -->
+<div class="bg-surface-container-high/60 rounded-lg p-space-sm flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">info</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase">Epistemic Uncertainty</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Model inference relies on frequency harmonics from single axis. Physical housing teardown is mandated to verify localized surface pitting.
+          </p>
+</div>
+</div>
+</div>
+<!-- Root Cause 2 Card -->
+<div class="w-full bg-surface-container rounded-xl p-space-md shadow-md flex flex-col space-y-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-md text-label-md font-bold shrink-0">2</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Vibration Isolator Mount Fatigue</h3>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">38% Probable</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant mt-0.5">Moderate Risk</span>
+</div>
+</div>
+<!-- Probability Bar -->
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-outline rounded-full" style="width: 38%"></div>
+</div>
+<!-- Evidence block -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col space-y-1">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span class="font-label-sm text-label-sm font-semibold">Supporting Evidence</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+          Visual inspection log notes 1.8mm elastomeric displacement after seismic table realignment completed last month.
+        </p>
+</div>
+</div>
+</div>
+<!-- Historical Incidents Match (Organizational Memory Link) -->
+<div class="w-full flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">auto_stories</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Organizational Memory</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm">Vector Match</span>
+</div>
+<!-- Match 1 Card -->
+<div class="w-full bg-surface-container rounded-xl p-space-md shadow-md flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-primary font-bold">INC-2023-112</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">14 mos ago</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          94% Match
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-semibold">Centrifuge B-2 Bearing Seizure during RPM Ramp</p>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-start gap-space-xs mt-1">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0 mt-0.5">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Historical Resolution</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Prevented full stator burn-out by replacing lower bearing race within 48h. Rotor undamaged.</p>
+</div>
+</div>
+</div>
+<!-- Match 2 Card -->
+<div class="w-full bg-surface-container rounded-xl p-space-md shadow-md flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant font-medium">INC-2023-045</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">19 mos ago</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">
+          68% Match
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">Autoclave Rotary Pump Harmonic Oscillation</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Resolved via dampener gasket replacement.</p>
+</div>
+</div>
+<!-- Suggested Follow-up Questions & Next Investigation Steps -->
+<div class="w-full flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">checklist</span>
+        Recommended Diagnostics
+      </h2>
+<span class="font-label-sm text-label-sm text-primary font-semibold" id="checklist-counter">0/3 Done</span>
+</div>
+<div class="w-full bg-surface-container rounded-xl p-space-md shadow-md flex flex-col space-y-space-sm">
+<!-- Step 1 -->
+<label class="flex items-start gap-space-sm cursor-pointer group" onclick="updateChecklist()">
+<input class="w-5 h-5 rounded mt-0.5 bg-surface-container-high border-none text-primary focus:ring-0 shrink-0 cursor-pointer" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium group-hover:text-primary transition-colors">1. Perform manual spindle spin test without rotor mounted</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Isolate acoustic friction from aeromechanical rotor drag.</span>
+</div>
+</label>
+<div class="w-full h-[1px] bg-surface-container-high"></div>
+<!-- Step 2 -->
+<label class="flex items-start gap-space-sm cursor-pointer group" onclick="updateChecklist()">
+<input class="w-5 h-5 rounded mt-0.5 bg-surface-container-high border-none text-primary focus:ring-0 shrink-0 cursor-pointer" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium group-hover:text-primary transition-colors">2. Extract motor bearing thermal logs from facility SCADA</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Audit heat spike timeline in the 48-hour ramp window.</span>
+</div>
+</label>
+<div class="w-full h-[1px] bg-surface-container-high"></div>
+<!-- Step 3 -->
+<label class="flex items-start gap-space-sm cursor-pointer group" onclick="updateChecklist()">
+<input class="w-5 h-5 rounded mt-0.5 bg-surface-container-high border-none text-primary focus:ring-0 shrink-0 cursor-pointer" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium group-hover:text-primary transition-colors">3. Query supplier batch serial number for defect alerts</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Check vendor database for batch lot #SP-8820-K.</span>
+</div>
+</label>
+<!-- Add Note Action -->
+<button class="w-full mt-space-xs py-space-sm px-space-md rounded-lg bg-surface-container-high text-on-surface hover:text-primary hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-space-xs font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">add_comment</span>
+        Add Custom Investigation Note
+      </button>
+</div>
+</div>
+<!-- Bottom CTA Navigation -->
+<div class="w-full pt-space-xs flex flex-col space-y-space-xs">
+<a class="w-full py-3.5 px-space-md rounded-xl bg-gradient-to-r from-primary-container to-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center gap-space-xs shadow-lg active:scale-[0.99] transition-transform" data-path="risk-and-actions" href="#">
+<span class="font-semibold">Proceed to Risk &amp; Action Plan</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<div class="flex items-center justify-center gap-1 text-on-surface-variant font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>Investigation findings cryptographically hashed to audit log</span>
+</div>
+</div>
+</div>
+<!-- Vanilla JS for Micro-Interactions -->
+<script>
+  function switchTriad(tabName) {
+    // Hide all panes
+    document.getElementById('pane-facts').classList.add('hidden');
+    document.getElementById('pane-hypotheses').classList.add('hidden');
+    document.getElementById('pane-gaps').classList.add('hidden');
+
+    // Reset button states
+    const tabs = ['facts', 'hypotheses', 'gaps'];
+    tabs.forEach(t => {
+      const btn = document.getElementById('tab-' + t);
+      btn.className = 'py-2 px-1 rounded-lg text-center font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1';
+    });
+
+    // Show active pane and style active tab
+    const activePane = document.getElementById('pane-' + tabName);
+    const activeBtn = document.getElementById('tab-' + tabName);
+    if (activePane) activePane.classList.remove('hidden');
+    if (activeBtn) {
+      activeBtn.className = 'py-2 px-1 rounded-lg text-center font-label-sm text-label-sm transition-all bg-primary text-on-primary font-semibold shadow-sm flex items-center justify-center gap-1';
+    }
+  }
+
+  function updateChecklist() {
+    setTimeout(() => {
+      const checkedCount = document.querySelectorAll('input[type="checkbox"]:checked').length;
+      const counter = document.getElementById('checklist-counter');
+      if (counter) {
+        counter.textContent = checkedCount + '/3 Done';
+        if (checkedCount === 3) {
+          counter.classList.remove('text-primary');
+          counter.classList.add('text-secondary');
+        } else {
+          counter.classList.add('text-primary');
+          counter.classList.remove('text-secondary');
+        }
+      }
+    }, 50);
+  }
+</script></main><div class="fixed bottom-24 right-margin-mobile z-40"><a class="flex items-center gap-space-xs px-space-md py-space-sm bg-gradient-to-r from-primary-container to-primary text-on-primary font-headline-sm text-headline-sm rounded-full shadow-[0_4px_20px_rgba(6,182,212,0.35)] active:scale-95 transition-transform min-h-[44px]" data-path="quick-report" href="#"><span class="material-symbols-outlined text-[20px]">add_alert</span><span class="font-label-md text-label-md uppercase tracking-wider font-semibold">Report Incident</span></a></div><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.4)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm tracking-tight mt-0.5">Dashboard</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="report" href="#"><span class="material-symbols-outlined text-[22px]">warning</span><span class="font-label-sm text-label-sm tracking-tight mt-0.5">Report</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] transition-colors text-primary font-semibold" data-path="ai-investigate" href="#"><span class="material-symbols-outlined text-[22px]">auto_awesome</span><span class="font-label-sm text-label-sm tracking-tight mt-0.5">Investigate</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="risk-and-actions" href="#"><span class="material-symbols-outlined text-[22px]">verified_user</span><span class="font-label-sm text-label-sm tracking-tight mt-0.5">Risk &amp; CAPA</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="memory-and-sim" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-label-sm tracking-tight mt-0.5">Simulation</span></a></div></nav></body></html>

@@ -1,0 +1,8 @@
+{
+  "name": "TraceMind AI",
+  "description": "Intelligent Incident Investigation and Recurrence Prevention. Learn from every failure. Prevent the next one.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
